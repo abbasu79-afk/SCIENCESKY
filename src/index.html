@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>শিক্ষণ - ইন্টারেক্টিভ শিক্ষামূলক ওয়েবসাইট</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>শিক্ষণ</h1>
+        <p>জ্ঞানার্জনের সহজ পথ</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active" id="home-link">হোম</a></li>
+          <li><a href="#" id="courses-link">কোর্স</a></li>
+          <li><a href="#" id="quiz-link">কুইজ</a></li>
+          <li><a href="#" id="about-link">আমাদের সম্পর্কে</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- হোম সেকশন -->
+      <section id="home-section" class="active-section">
+        <div class="hero">
+          <h2>স্বাগতম শিক্ষণ প্ল্যাটফর্মে</h2>
+          <p>আমাদের ইন্টারেক্টিভ কোর্সের মাধ্যমে দক্ষতা অর্জন করুন</p>
+          <button id="explore-btn">কোর্স এক্সপ্লোর করুন</button>
+        </div>
+
+        <div class="features">
+          <div class="feature-card">
+            <i class="fas fa-book-open"></i>
+            <h3>বিস্তৃত কোর্স</h3>
+            <p>বিভিন্ন বিষয়ে ১০০+ কোর্স</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>ইন্টারেক্টিভ লার্নিং</h3>
+            <p>প্র্যাকটিসের মাধ্যমে শিখুন</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>প্রোগ্রেস ট্র্যাকিং</h3>
+            <p>আপনার অগ্রগতি মনিটর করুন</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- কোর্স সেকশন -->
+      <section id="courses-section">
+        <h2>আমাদের কোর্সসমূহ</h2>
+        <div class="course-categories">
+          <button class="category-btn active-category" data-category="all">
+            সব কোর্স
+          </button>
+          <button class="category-btn" data-category="programming">
+            প্রোগ্রামিং
+          </button>
+          <button class="category-btn" data-category="science">বিজ্ঞান</button>
+          <button class="category-btn" data-category="math">গণিত</button>
+        </div>
+        <div class="courses-container" id="courses-container">
+          <!-- কোর্স কার্ডগুলি JavaScript দ্বারা লোড হবে -->
+        </div>
+      </section>
+
+      <!-- কুইজ সেকশন -->
+      <section id="quiz-section">
+        <div class="quiz-container">
+          <h2>জ্ঞান পরীক্ষা করুন</h2>
+          <div class="quiz-categories">
+            <button class="quiz-category-btn" data-subject="science">
+              বিজ্ঞান
+            </button>
+            <button class="quiz-category-btn" data-subject="math">গণিত</button>
+            <button class="quiz-category-btn" data-subject="history">
+              ইতিহাস
+            </button>
+          </div>
+          <div id="quiz-area">
+            <div id="quiz-start-screen">
+              <p>কুইজ শুরু করতে বিষয় নির্বাচন করুন</p>
+            </div>
+            <div id="quiz-questions" class="hidden">
+              <div id="question-container">
+                <h3 id="question-text"></h3>
+                <div id="options-container"></div>
+              </div>
+              <div id="quiz-progress"></div>
+              <button id="next-question-btn" class="hidden">
+                পরবর্তী প্রশ্ন
+              </button>
+            </div>
+            <div id="quiz-results" class="hidden">
+              <h3>আপনার স্কোর: <span id="score"></span></h3>
+              <p id="result-message"></p>
+              <button id="restart-quiz-btn">আবার চেষ্টা করুন</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- আমাদের সম্পর্কে সেকশন -->
+      <section id="about-section">
+        <h2>আমাদের সম্পর্কে</h2>
+        <div class="about-content">
+          <p>
+            শিক্ষণ হল একটি ইন্টারেক্টিভ শিক্ষামূলক প্ল্যাটফর্ম যার লক্ষ্য সহজ ও
+            মজাদার উপায়ে জ্ঞান প্রদান করা। আমরা বিশ্বাস করি যে সঠিক গাইডেন্স
+            এবং অনুশীলনের মাধ্যমে যে কেউ যেকোনো বিষয়ে দক্ষতা অর্জন করতে পারে।
+          </p>
+          <div class="team">
+            <h3>আমাদের টিম</h3>
+            <div class="team-members">
+              <div class="member">
+                <img src="https://via.placeholder.com/150" alt="টিম মেম্বার" />
+                <h4>আহমেদ রহমান</h4>
+                <p>প্রধান শিক্ষক</p>
+              </div>
+              <div class="member">
+                <img src="https://via.placeholder.com/150" alt="টিম মেম্বার" />
+                <h4>সুমাইয়া আক্তার</h4>
+                <p>কোর্স ডিজাইনার</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>যোগাযোগ</h3>
+          <p><i class="fas fa-envelope"></i> shikkhon@example.com</p>
+          <p><i class="fas fa-phone"></i> +880 1XXX-XXXXXX</p>
+        </div>
+        <div class="footer-section">
+          <h3>সামাজিক যোগাযোগ</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 শিক্ষণ. সকল স্বত্ব সংরক্ষিত.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
